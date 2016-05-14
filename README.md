@@ -5,6 +5,8 @@
 
 A [NativeScript](https://nativescript.org/) module providing access to [Fortumo SMS Gateway](https://fortumo.com/).
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7732Z92RRGFRU)
+
 ## License
 
 [MIT license](https://raw.githubusercontent.com/mkloubert/nativescript-fortumo-sms/master/LICENSE)
