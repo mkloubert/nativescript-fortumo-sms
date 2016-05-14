@@ -1,7 +1,7 @@
 {
   "name": "nativescript-fortumo-sms",
   "description": "A NativeScript module providing access to Fortumo SMS Gateway.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "nativescript": {
     "platforms": {
       "android": "1.1.0"

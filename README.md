@@ -140,7 +140,6 @@ function buyProduct(args) {
         switch (cbResult.code) {
             case 0:
                 // SUCCESS
-                // pay key is stored in 'cbResult.key'
                 break;
                 
             case 1:
