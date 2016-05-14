@@ -1,0 +1,32 @@
+{
+  "name": "nativescript-fortumo-sms",
+  "description": "A NativeScript module providing access to Fortumo SMS Gateway.",
+  "version": "1.0.0",
+  "nativescript": {
+    "platforms": {
+      "android": "1.1.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkloubert/nativescript-fortumo-sms"
+  },
+  "keywords": [
+    "NativeScript",
+    "Fortumo",
+    "SMS"
+  ],
+  "author": {
+    "name": "Marcel Joachim Kloubert",
+    "email": "marcel.kloubert@gmx.net"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/mkloubert/nativescript-fortumo-sms/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/mkloubert/nativescript-fortumo-sms/issues"
+  },
+  "homepage": "https://github.com/mkloubert/nativescript-fortumo-sms",
+  "readmeFilename": "README.md"
+}
