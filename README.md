@@ -200,51 +200,51 @@ The callback that is submitted to the `purchase.start` method receives an object
 | service | Service data (if `code` = `0`) |
 | user | User data (if `code` = `0`) |
 
-####### billing
+`billing`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | status | The status |
 
-####### credit
+`credit`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | amount | The amount |
 | name | The name |
 
-####### message
+`message`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | id | The ID |
 
-####### payment
+`payment`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | code | The code |
 
-####### price
+`price`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | amount | The amount |
 | currency | The currency |
 
-####### product
+`product`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | name | The name |
 
-####### service
+`service`:
 
 | Name  | Description  |
 | ----- | ----------- |
 | id | The ID |
 
-####### user
+`user`:
 
 | Name  | Description  |
 | ----- | ----------- |
