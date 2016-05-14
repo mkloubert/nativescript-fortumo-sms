@@ -80,38 +80,40 @@ function init(cfg) {
                             var extras = intent.getExtras();
                             
                             resultCtx.credit = {
-                                amount: extras.getString("credit_amount"),
-                                name: extras.getString("credit_name"),
+                                amount: resp.getCreditAmount(),
+                                name: resp.getCreditName()
                             };
                             
                             resultCtx.message = {
-                                id: extras.getString("message_id")
+                                id: resp.getMessageId()
                             };
                             
                             resultCtx.price = {
-                                amount: extras.getString("price_amount"),
-                                currency: extras.getString("price_currency")
+                                amount: resp.getPriceAmount(),
+                                currency: resp.getPriceCurrency()
                             };
                             
                             resultCtx.payment = {
-                                code: extras.getString("payment_code")
+                                code: resp.getPaymentCode()
                             };
                             
                             resultCtx.product = {
-                                name: extras.getString("product_name")
+                                name: resp.getProductName()
                             };
                             
                             resultCtx.billing = {
-                                status: extras.getString("billing_status")
+                                status: resp.getBillingStatus()
                             };
                             
                             resultCtx.user = {
-                                id: extras.getString("user_id")
+                                id: resp.getUserId()
                             };
                             
                             resultCtx.service = {
-                                id: extras.getString("service_id")
+                                id: resp.getServiceId()
                             };
+                            
+                            resultCtx.sku = resp.getSku();
                             break;
                             
                         case mp.MpUtils.MESSAGE_STATUS_FAILED:

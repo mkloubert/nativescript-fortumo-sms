@@ -199,6 +199,7 @@ The callback that is submitted to the `purchase.start` method receives an object
 | price | Price data (if `code` = `0`) |
 | product | Product data (if `code` = `0`) |
 | service | Service data (if `code` = `0`) |
+| sku | Sku (if `code` = `0`) |
 | user | User data (if `code` = `0`) |
 
 `billing`:
