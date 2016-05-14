@@ -193,7 +193,7 @@ function newPurchase() {
         return this;
     };
     
-    // display name
+    // amount
     var amount;
     p.getAmount = function() {
         return amount;    

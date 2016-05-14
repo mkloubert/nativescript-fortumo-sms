@@ -5,6 +5,8 @@
 
 A [NativeScript](https://nativescript.org/) module providing access to [Fortumo SMS Gateway](https://fortumo.com/).
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7732Z92RRGFRU)
+
 ## License
 
 [MIT license](https://raw.githubusercontent.com/mkloubert/nativescript-fortumo-sms/master/LICENSE)
@@ -117,6 +119,7 @@ The (optional) object that is submitted to the `PayPal.init` function has the fo
 
 | Name  | Description  |
 | ----- | ----------- |
+| onActivityResult  | [OPTIONAL] Logic for [Activity.onActivityResult](http://developer.android.com/reference/android/app/Activity.html#onActivityResult%28int,%20int,%20android.content.Intent%29) method of the underlying Android activity that is used to invoke logic for other modules, e.g. |
 | requestCode  | [OPTIONAL] The custom request code to use (e.g. for [Activity.onActivityResult](http://developer.android.com/reference/android/app/Activity.html#onActivityResult%28int,%20int,%20android.content.Intent%29) Android method). Default: `198612227`  |
 
 ### Start purchase
@@ -160,6 +163,94 @@ function buyProduct(args) {
 }
 exports.buyProduct = buyProduct;
 ```
+
+The `purchase` object that is created by `FortumoSMS.newPurchase` function has the following structure.
+
+#### Methods
+
+| Name  | Description  |
+| ----- | ----------- |
+| isConsumable | Gets if the product is consumable or not. Example: `var c = purchase.isConsumable();` |
+| getAmount | Gets the price. Example: `var a = purchase.getAmount();` |
+| getCreditsMultiplier | Gets the multiplier for the credits. Example: `var m = purchase.getCreditsMultiplier();` |
+| getCurrency | Gets the currency. Example: `var c = purchase.getCurrency();` |
+| getId | Gets the product ID. Example: `var id = purchase.getId();` |
+| getName | Gets the product name. Example: `var n = purchase.getName();` |
+| getSecret | Gets the app secret. Example: `var s = purchase.getSecret();` |
+| setAmount | Sets the price. Example: `payment.setAmount('1.25');` |
+| setCreditsMultiplier | Sets the multiplier for the credits. Example: `purchase.setCreditsMultiplier(1.23);` |
+| setCurrency | Sets the currency. Example: `purchase.setCurrency('USD');` |
+| setId | Sets the product ID. Example: `purchase.setId('<PRODUCT-ID>');` |
+| setIfConsumable | Sets if the product is consumable or not. Example: `purchase.setIfConsumable(true);` |
+| setName | Sets the product name. Example: `purchase.setName('My product');` |
+| setSecret | Sets the app secret. Example: `purchase.setSecret('<APP-SECRET>');` |
+| start | Starts the purchase process. |
+
+###### start
+
+The callback that is submitted to the `purchase.start` method receives an object with the following properties:
+
+| Name  | Description  |
+| ----- | ----------- |
+| billing | Billing data (if `code` = `0`) |
+| code | The result code. `0` = success, `-1` = unhandled exception, `1` = canceled, `2` = failed, `3` = pending |
+| credit | Credit data (if `code` = `0`) |
+| message | The error message (if `code` = `-1`) or purchase message data (if `code` = `0`)
+| payment | Payment data (if `code` = `0`) |
+| price | Price data (if `code` = `0`) |
+| product | Product data (if `code` = `0`) |
+| service | Service data (if `code` = `0`) |
+| user | User data (if `code` = `0`) |
+
+`billing`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| status | The status |
+
+`credit`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| amount | The amount |
+| name | The name |
+
+`message`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
+
+`payment`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| code | The code |
+
+`price`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| amount | The amount |
+| currency | The currency |
+
+`product`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| name | The name |
+
+`service`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
+
+`user`:
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
 
 ## Enhancements
 
