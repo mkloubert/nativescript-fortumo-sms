@@ -6,7 +6,7 @@ function createViewModel() {
 
     viewModel.init = function() {
         FortumoSMS.addLogger(function(msg) {
-            console.log('[nativescript-fortumo-sms]: ' + e);        
+            console.log('[nativescript-fortumo-sms]: ' + msg);        
         });
         
         try {
