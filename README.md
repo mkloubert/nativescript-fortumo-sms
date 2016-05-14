@@ -132,8 +132,8 @@ function buyProduct(args) {
         .setAmount('1.95')
         .setCurrency('USD');
 
-    // start checkout / payment
-    payment.start(function(cbResult) {
+    // start purchase
+    purchase.start(function(cbResult) {
         switch (cbResult.code) {
             case 0:
                 // SUCCESS
@@ -168,7 +168,7 @@ exports.buyProduct = buyProduct;
 If you want to get the logging output of the module, you can use `PayPal.addLogger` function to add a callback that receives a message from the module:
 
 ```javascript
-PayPal.addLogger(function(msg) {
+FortumoSMS.addLogger(function(msg) {
     console.log('[nativescript-paypal]: ' + msg);
 });
 ```
