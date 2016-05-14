@@ -279,7 +279,9 @@ function newPurchase() {
     };
     
     // start()
-    p.start = function() {
+    p.start = function(cb) {
+        callback = cb;
+        
         activity.runOnUiThread(r);
     };
     
