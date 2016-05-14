@@ -191,72 +191,24 @@ The callback that is submitted to the `purchase.start` method receives an object
 
 | Name  | Description  |
 | ----- | ----------- |
-| billing | Billing data (if `code` = `0`) |
+| billing.status | The billing status (if `code` = `0`) |
 | code | The result code. `0` = success, `-1` = unhandled exception, `1` = canceled, `2` = failed, `3` = pending |
-| credit | Credit data (if `code` = `0`) |
-| message | The error message (if `code` = `-1`) or purchase message data (if `code` = `0`)
-| payment | Payment data (if `code` = `0`) |
-| price | Price data (if `code` = `0`) |
-| product | Product data (if `code` = `0`) |
-| service | Service data (if `code` = `0`) |
+| credit.amount | The credit amount (if `code` = `0`) |
+| credit.currency | The credit name (if `code` = `0`) |
+| message.id | The message ID (if `code` = `0`) |
+| payment.code | The payment code (if `code` = `0`) |
+| price.amount | The price amount (if `code` = `0`) |
+| price.currency | The price currency (if `code` = `0`) |
+| product.name | The product name (if `code` = `0`) |
+| service.id | The service ID (if `code` = `0`) |
 | sku | Sku (if `code` = `0`) |
-| user | User data (if `code` = `0`) |
-
-`billing`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| status | The status |
-
-`credit`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| amount | The amount |
-| name | The name |
-
-`message`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| id | The ID |
-
-`payment`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| code | The code |
-
-`price`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| amount | The amount |
-| currency | The currency |
-
-`product`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| name | The name |
-
-`service`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| id | The ID |
-
-`user`:
-
-| Name  | Description  |
-| ----- | ----------- |
-| id | The ID |
+| user.id | The user ID (if `code` = `0`) |
 
 ## Enhancements
 
 ### Logging
 
-If you want to get the logging output of the module, you can use `PayPal.addLogger` function to add a callback that receives a message from the module:
+If you want to get the logging output of the module, you can use `FortumoSMS.addLogger` function to add a callback that receives a message from the module:
 
 ```javascript
 FortumoSMS.addLogger(function(msg) {
