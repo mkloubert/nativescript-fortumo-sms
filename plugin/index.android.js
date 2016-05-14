@@ -203,12 +203,33 @@ function newPurchase() {
         return this;
     };
     
+    // currency
     var currency = 'USD';
     p.getCurrency = function() {
         return currency;    
     };
     p.setCurrency = function(newCurrency) {
         currency = newCurrency;
+        return this;
+    };
+    
+    // credits multiplier
+    var creditsMultiplier;
+    p.getCreditsMultiplier = function() {
+        return creditsMultiplier;    
+    };
+    p.setCreditsMultiplier = function(newCreditsMultiplier) {
+        creditsMultiplier = newCreditsMultiplier;
+        return this;
+    };
+    
+    // is consumable?
+    var consumable;
+    p.isConsumable = function() {
+        return consumable;
+    };
+    p.setIfConsumable = function(isConsumable) {
+        consumable = isConsumable;
         return this;
     };
     
@@ -227,6 +248,16 @@ function newPurchase() {
         if (displayName) {
             logMsg('newPurchase >> displayname: ' + displayName);
             builder.setDisplayString(displayName);
+        }
+        
+        if (creditsMultiplier) {
+            logMsg('newPurchase >> creditsmultiplier: ' + creditsMultiplier);
+            builder.setCreditsMultiplier(creditsMultiplier);
+        }
+        
+        if (consumable !== undefined) {
+            logMsg('newPurchase >> consumable: ' + consumable);
+            builder.setConsumable(consumable);
         }
         
         logMsg('newPurchase >> amount: ' + amount);

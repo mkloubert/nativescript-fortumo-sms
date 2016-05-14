@@ -169,6 +169,6 @@ If you want to get the logging output of the module, you can use `PayPal.addLogg
 
 ```javascript
 FortumoSMS.addLogger(function(msg) {
-    console.log('[nativescript-paypal]: ' + msg);
+    console.log('[nativescript-fortumo-sms]: ' + msg);
 });
 ```
