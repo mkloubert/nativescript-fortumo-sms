@@ -184,6 +184,72 @@ The `purchase` object that is created by `FortumoSMS.newPurchase` function has t
 | setSecret | Sets the app secret. Example: `purchase.setSecret('<APP-SECRET>');` |
 | start | Starts the purchase process. |
 
+###### start
+
+The callback that is submitted to the `purchase.start` method receives an object with the following properties:
+
+| Name  | Description  |
+| ----- | ----------- |
+| billing | Billing data (if `code` = `0`) |
+| code | The result code. `0` = success, `-1` = unhandled exception, `1` = canceled, `2` = failed, `3` = pending |
+| credit | Credit data (if `code` = `0`) |
+| message | The error message (if `code` = `-1`) or purchase message data (if `code` = `0`)
+| payment | Payment data (if `code` = `0`) |
+| price | Price data (if `code` = `0`) |
+| product | Product data (if `code` = `0`) |
+| service | Service data (if `code` = `0`) |
+| user | User data (if `code` = `0`) |
+
+####### billing
+
+| Name  | Description  |
+| ----- | ----------- |
+| status | The status |
+
+####### credit
+
+| Name  | Description  |
+| ----- | ----------- |
+| amount | The amount |
+| name | The name |
+
+####### message
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
+
+####### payment
+
+| Name  | Description  |
+| ----- | ----------- |
+| code | The code |
+
+####### price
+
+| Name  | Description  |
+| ----- | ----------- |
+| amount | The amount |
+| currency | The currency |
+
+####### product
+
+| Name  | Description  |
+| ----- | ----------- |
+| name | The name |
+
+####### service
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
+
+####### user
+
+| Name  | Description  |
+| ----- | ----------- |
+| id | The ID |
+
 ## Enhancements
 
 ### Logging
