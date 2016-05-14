@@ -64,6 +64,9 @@ function init(cfg) {
     }
     
     reqCode = 198612227;
+    if (cfg.requestCode) {
+        reqCode = cfg.requestCode;
+    }
     
     activity.onActivityResult = function(requestCode, resultCode, intent) {
         var resultCtx = {};
